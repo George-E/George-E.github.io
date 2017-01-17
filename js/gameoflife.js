@@ -1,11 +1,11 @@
 var gameSize = 100;//X*X
-var probabilityOfStartingSqaure = 10;// 1/N
-var sqaureFillColour = "#666666";
+var probabilityOfStartingSqaure = 8;// 1/N
+var backgroundColour = "#aaa";
+var sqaureFillColour = "#555555";
 //var squaresBorderColour = "ffffff";
 var squaresBorderColourHue = 0;
-var squaresBorderColourHueIncrement = 5;
-
-
+var squaresBorderColourHueIncrement = 1;
+var refreshRate = 150; //milliS
 
 //create the canvas element
 var myCanvas = document.createElement("canvas");
@@ -58,7 +58,7 @@ function progressGame() {
     var ctx = myCanvas.getContext("2d");
     //first we clear the canvas
     ctx.clearRect(0, 0, gameSize*10, gameSize*10);
-    ctx.fillStyle = "#333333";
+    ctx.fillStyle = backgroundColour;
     ctx.fillRect(0, 0, myCanvas.width, myCanvas.height);
 
     //progress border colour
@@ -115,7 +115,7 @@ function progressGame() {
 function setDynamicBackground() {
 	setUpGame();
 	progressGame();
-	setInterval("progressGame()", 500);
+	setInterval("progressGame()", refreshRate);
 }
 
 function drawGame() {

@@ -1,6 +1,6 @@
 html {
     color: #000;
-    background: #aaa;
+    background: #fff;
 }
 
 #page {
@@ -12,7 +12,7 @@ html {
 
 .innerBlock {
     
-    padding: 10px 50px;/*top&bottom left&right*/
+    padding: 10px 0;/*top&bottom left&right*/
     margin: 40px 40px;
     background: #ffffff;
     border: solid rgb(24,4,55);
@@ -51,6 +51,38 @@ html {
 }
 
 
+.project {
+    /*background: blue;*/
+    padding: 0 5%;
+}
+
+.icon {
+    height: 5em;
+    float: left;
+    padding-right:1em;
+}
+
+.info {
+    
+    text-align: left;/*overwrite page*/
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+.info h4 {
+    float: right;
+}
+
+.info h3 {
+    margin: 0.25em 0 0 0;
+}
+
+.info p {
+    margin: 1.25em 0 0 0;
+}
+
+
+
 
 
 
@@ -80,9 +112,9 @@ body {
     color: #444;
 }
 .yui-gf {
-    margin-bottom: 2em;
+    /*margin-bottom: 2em;
     padding-bottom: 2em;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;*/
 }
 /* //-- header, body, footer -- */
 
@@ -152,20 +184,7 @@ a#pdf {
 a#pdf:hover {
     background: #222;
 }
-.job {
-    position: relative;
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #ccc;
-}
-.job h4 {
-    position: absolute;
-    top: 0.35em;
-    right: 0
-}
-.job p {
-    margin: 0.75em 0 3em 0;
-}
+
 .last {
     border: none;
 }

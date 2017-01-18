@@ -1,7 +1,7 @@
 var gameSize = 100;//X*X
 var probabilityOfStartingSqaure = 8;// 1/N
-var backgroundColour = "#aaa";
-var sqaureFillColour = "#555555";
+var backgroundColour = "#333";
+var sqaureFillColour = "#777";
 //var squaresBorderColour = "ffffff";
 var squaresBorderColourHue = 0;
 var squaresBorderColourHueIncrement = 1;
@@ -95,7 +95,7 @@ function progressGame() {
 	            ctx.fill();
 
 	            //draw a white border for the rectangle
-	            ctx.strokeStyle = squaresBorderColour;
+	            ctx.strokeStyle = "#333";//squaresBorderColour;
 	            ctx.stroke();
 
 	            //indicating when finished drawing the rectangle

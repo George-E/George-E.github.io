@@ -63,17 +63,16 @@ html {
 }
 
 .info {
-    
     text-align: left;/*overwrite page*/
-    width: 100%;
     padding-top: 0.5em;
     padding-bottom: 1em;
 }
-.info h4 {
+
+.info h4 {/*date*/
     float: right;
 }
 
-.info h3 {
+.info h3 {/*subtitle*/
     margin: 0.25em 0 0 0;
 }
 
@@ -83,7 +82,9 @@ html {
 
 
 
-
+.block {
+    height: 30em;
+}
 
 
 

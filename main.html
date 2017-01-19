@@ -8,19 +8,27 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 
-	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
-	<link rel="stylesheet" type="text/css" href="css/resume.css" media="all" />
 
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
+
+	<link rel='stylesheet' type="text/css" media='screen and (min-width: 40em)' href='css/resume.css' />
+	<!--apply if current browser width is atleast 40em -->
+	<!--<link rel='stylesheet' type="text/css" media='screen and (max-width: 39.9em)' href='css/resume.css' />-->
+	<!--apply if current browser width is atmost 39.9em -->
 	<script type="text/javascript" src="js/gameoflife.js"></script>
 
 </head>
-<body ><!--onload="setDynamicBackground()"-->
+<body ><!--onload="setDynamicBackground()">-->
 
 	<div id="page">
 
 
 		<div id="hdSection" class="innerBlock">
-			<img src="images/resumeNameHD.png" alt="George Eisa" style="width:100%;max-width:600px;max-height:20%;">
+		<!--
+			<img src="images/resumeNameWide.png" alt="George Eisa" style="width:100%;max-width:600px;max-height:20%;">
+		-->
+			<h1>George Eisa</h1>
 			<h2>Software Engineering Student</h2>
 			<h3>Beta Portfolio Website</h3>
 			<!--TODO: figure out how to make pdf not download /open in browser-->
@@ -32,23 +40,42 @@
 			
 			<div id="Pronto" class="project">
 
-				<div class="icon">
-					<img src="images/pronto/icon.png" alt="Pronto" style="height:100%;width:auto">
-				</div><!--// .yui-u -->
-
-				<div class="info">
-					<h4>Nov 2016</h4>
-					<h2>Pronto</h2>
-					<h3>The Reddit of Facebook Chats </h3>
-					<p>Pronto is an Android app that uses linear regression machine learning to sort the daily
-						messages in congested Facebook group chats. </p>
+				<div class="thumbnail">
+					<img src="images/pronto/thumbnail.png" alt="Pronto" style="height:100%;width:auto">
 				</div>
 
-				<div>
-					<img src="images/pronto/screen1.png" alt="Screenshot" style="height:30em;width:auto">
-					<img src="images/pronto/screen2.png" alt="Screenshot" style="height:30em;width:auto">
-				</div><!--// .yui-u -->
+				<div class = "bio">
 
+					
+
+					<div class="titles">
+						<div class="icon">
+							<img src="images/pronto/icon.png" alt="Pronto" style="height:100%;width:auto">
+						</div>
+						<!--<h4>Nov 2016</h4>-->
+						<h2>Pronto</h2>
+						<h3>The Reddit of Facebook Chats </h3>
+					</div>
+
+					<div class="info">
+						<p>Pronto is an Android app that uses linear regression machine learning to sort the daily
+							messages in congested Facebook group chats. <p>
+					</div>
+
+				</div>
+
+				<h5>&#x25bc See More</h4>
+<!--
+				<div class="body">
+
+					<img src="images/pronto/screen1.png" alt="Screenshot" style="height:30em;width:auto">
+					<p>You are a first year software student. You open your laptop to check today’s messages in your class’ Facebook chat and...THE HORROR: 467 unread messages. Any 1A student will confirm that this is no exaggeration. It is a silly yet serious problem we face every day. Should we read through 467 messages, most of which are nonsense, or ignore them all and risk missing out on genuinely useful information? 
+						<br> <br>
+						Our project will solve this issue. We are creating a system to simplify the viewing of important messages from a Facebook chat. Quite simply, we are creating a reddit-like system to filter and sort Facebook messages based on popularity amongst classmates, how new it is, and how similar it is to past popular messages. 
+					</p>
+				</div>
+
+-->
 			</div><!--// .yui-gf -->
 
 		</div><!--// bdSection -->

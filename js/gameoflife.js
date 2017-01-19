@@ -1,11 +1,11 @@
 var gameSize = 100;//X*X
 var probabilityOfStartingSqaure = 8;// 1/N
-var backgroundColour = "#fff";
-var sqaureFillColour = 'rgb('+102+','+154+','+204+')';
+var backgroundColour = "#666";
+var sqaureFillColour =  "#999";//'rgb('+102+','+154+','+204+')';
 //var squaresBorderColour = "ffffff";
-var squaresBorderColourHue = 0;
-var squaresBorderColourHueIncrement = 1;
-var refreshRate = 150; //milliS
+var squaresBorderColourHue = 40;
+var squaresBorderColourHueIncrement = 4;
+var refreshRate = 200; //milliS
 
 //create the canvas element
 var myCanvas = document.createElement("canvas");

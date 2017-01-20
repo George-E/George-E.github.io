@@ -17,12 +17,58 @@
 	<!--<link rel='stylesheet' type="text/css" media='screen and (max-width: 39.9em)' href='css/resume.css' />-->
 	<!--apply if current browser width is atmost 39.9em -->
 	<script type="text/javascript" src="js/gameoflife.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".expand").click(function(){
+
+
+			$expand = $(this);
+    		//getting the next element
+    $content = $expand.next();
+
+     $collapse = $content.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $expand.hide();
+
+    $content.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        
+        $collapse.show();
+    });
+
+});
+
+			$(".collapse").click(function(){
+
+
+			$collapse = $(this);
+    		//getting the next element
+    $content = $collapse.prev();
+
+     $expand = $content.prev();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $collapse.hide();
+
+    $content.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        
+        $expand.show();
+    });
+
+});
+
+
+		});
+	</script>
 
 </head>
+
 <body ><!--onload="setDynamicBackground()">-->
 
 	<div id="page">
-
 
 		<div id="hdSection" class="innerBlock">
 		<!--
@@ -44,9 +90,7 @@
 					<img src="images/pronto/thumbnail.png" alt="Pronto" style="height:100%;width:auto">
 				</div>
 
-				<div class = "bio">
-
-					
+				<div id = "bio">
 
 					<div class="titles">
 						<div class="icon">
@@ -64,18 +108,26 @@
 
 				</div>
 
-				<h5>&#x25bc See More</h4>
-<!--
-				<div class="body">
-
-					<img src="images/pronto/screen1.png" alt="Screenshot" style="height:30em;width:auto">
-					<p>You are a first year software student. You open your laptop to check today’s messages in your class’ Facebook chat and...THE HORROR: 467 unread messages. Any 1A student will confirm that this is no exaggeration. It is a silly yet serious problem we face every day. Should we read through 467 messages, most of which are nonsense, or ignore them all and risk missing out on genuinely useful information? 
-						<br> <br>
-						Our project will solve this issue. We are creating a system to simplify the viewing of important messages from a Facebook chat. Quite simply, we are creating a reddit-like system to filter and sort Facebook messages based on popularity amongst classmates, how new it is, and how similar it is to past popular messages. 
-					</p>
+				<div class ="expand">
+						<h5>&#x25bc See More</h5>
 				</div>
 
--->
+				<div class="extra">
+
+					<img id="ProntoPic" src="images/pronto/screen1.png" alt="Screenshot" style="height:30em;width:auto">
+
+					<div id="ProntoCenter">
+						<p>You are a first year software student. You open your laptop to check today’s messages in your class’ Facebook chat and...THE HORROR: 467 unread messages. Any 1A student will confirm that this is no exaggeration. It is a silly yet serious problem we face every day. Should we read through 467 messages, most of which are nonsense, or ignore them all and risk missing out on genuinely useful information? 
+							<br> <br>
+							Our project will solve this issue. We are creating a system to simplify the viewing of important messages from a Facebook chat. Quite simply, we are creating a reddit-like system to filter and sort Facebook messages based on popularity amongst classmates, how new it is, and how similar it is to past popular messages. 
+						</p>
+					</div>
+				</div>
+
+				<div class ="collapse">
+						<h5>&#x25B2 See Less</h5>
+				</div>
+
 			</div><!--// .yui-gf -->
 
 		</div><!--// bdSection -->

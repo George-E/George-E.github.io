@@ -115,17 +115,26 @@ html {
     display: none;
 }
 
+
 #ProntoPic {
-    float: left;
+    position: relative;
+    top: 60px;
 }
 
-#ProntoCenter {
-    text-align: center;/*overwrite project*/
-    padding-left: 1em;
-    height: 30em;
-    display: table-cell;
-    vertical-align: middle;
+.carousel {
+    position: relative;
+    top: -80px;
+    height: 20em;
 }
+
+
+
+#ProntoCenter {
+    position: relative;
+}
+
+
+
 
 
 

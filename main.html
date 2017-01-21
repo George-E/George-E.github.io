@@ -9,106 +9,29 @@
 	<meta name="description" content="" />
 
 	<!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
 
 	<link rel='stylesheet' type="text/css" media='screen and (min-width: 40em)' href='css/resume.css' />
 	<!--apply if current browser width is atleast 40em -->
-	<!--<link rel='stylesheet' type="text/css" media='screen and (max-width: 39.9em)' href='css/resume.css' />-->
+	<link rel='stylesheet' type="text/css" media='screen and (max-width: 39.9em)' href='css/resume.css' />
 	<!--apply if current browser width is atmost 39.9em -->
 	<script type="text/javascript" src="js/gameoflife.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
 
-
-			$(".carousel").carousel({
-            	dist:-100,
-            	shift:0,
-            	padding:10, 
-           		time_constant:100
-      		});
-
-      		autoplay()   
-function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 4500);
-}
-
-			$(".expand").click(function(){
-					$(".carousel").carousel({
-            	dist:-100,
-            	shift:0,
-            	padding:10, 
-           		time_constant:100
-      		});
-
-			$expand = $(this);
-    		//getting the next element
-    $content = $expand.next();
-
-     $collapse = $content.next();
-    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-    $expand.hide();
-
-    $content.slideToggle(500, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        
-        $collapse.show();
-    });
-
-});
-
-			$(".collapse").click(function(){
-
-
-			$collapse = $(this);
-    		//getting the next element
-    $content = $collapse.prev();
-
-     $expand = $content.prev();
-    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-    $collapse.hide();
-
-    $content.slideToggle(500, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        
-        $expand.show();
-    });
-
-});
-
-/*
-$(".project").hover(
-	//The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.
-function(){
-   // alert("You entered p1!");
-   $(this).css("background-color", "#ccc");
-},
-function(){
-   // alert("Bye! You now leave p1!");
-   $(this).css("background-color", "#fff");
-});
-*/
-
-		});
-	</script>
-
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+		
 </head>
 
 <body ><!--onload="setDynamicBackground()">-->
-
- 	<!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
 	<div id="page">
 
@@ -124,8 +47,10 @@ function(){
 		</div><!--// hdSection -->
 
 
+		<Ul id="animate1">
+		<li>
 		<div id="bdSection" class="innerBlock">
-			
+
 			<div id="Pronto" class="project">
 
 				<div class="thumbnail">
@@ -156,41 +81,96 @@ function(){
 
 				<div class="extra">
 
-					<div id="ProntoPic">
-						<div class="carousel">
-							<div class="carousel-item" href="#one!">
-									<img  src="images/pronto/screen1.png">
-							</div>
-							<div class="carousel-item" href="#two!">
-									<img src="images/pronto/screen2.png">
-							</div>
-							<div class="carousel-item" href="#three!">
-									<img src="images/pronto/screen3.png">
-							</div>
-						</div>
-					</div>
+					<img id="ProntoPic" src="images/pronto/screen1.png" alt="Screenshot" style="height:30em;width:auto">
 
-					<!--<img id="ProntoPic" src="images/pronto/screen1.png" alt="Screenshot" style="height:30em;width:auto">-->
-
-					<div id="ProntoCenter">
-						<p>You are a first year software student. You open your laptop to check today’s messages in your class’ Facebook chat and...THE HORROR: 467 unread messages. Any 1A student will confirm that this is no exaggeration. It is a silly yet serious problem we face every day. Should we read through 467 messages, most of which are nonsense, or ignore them all and risk missing out on genuinely useful information? 
-							<br> <br>
-							Our project will solve this issue. We are creating a system to simplify the viewing of important messages from a Facebook chat. Quite simply, we are creating a reddit-like system to filter and sort Facebook messages based on popularity amongst classmates, how new it is, and how similar it is to past popular messages. 
+					<ul id="ProntoCenter">
+						<li>
+						<p>You are a first year software student. You open your laptop to check today’s messages in your class’ Facebook chat and...THE HORROR: 467 unread messages. Any 1A student will confirm that this is no exaggeration. It is a silly yet serious problem we face every day. Should we read through 467 messages, most of which are nonsense, or ignore them all and risk missing out on genuinely useful information?
 						</p>
-					</div>
+						</li>
+
+						<li>
+						<br>
+						</li>
+
+						<li>
+						<p>You are a first year software student. You open your laptop to check today’s messages in your class’ Facebook chat and...THE HORROR: 467 unread messages. Any 1A student will confirm that this is no exaggeration. It is a silly yet serious problem we face every day. Should we read through 467 messages, most of which are nonsense, or ignore them all and risk missing out on genuinely useful information?
+						</p>
+						</li>
+					</ul>
 				</div>
 
 				<div class ="collapse">
 						<h5>&#x25B2 See Less</h5>
 				</div>
 
-			</div><!--// .yui-gf -->
+			</div>
+		</div>
+		</li>
+		</ul>
 
-		</div><!--// bdSection -->
 
+		<Ul id="animate2">
+		<li>
+		<div id="bdSection" class="innerBlock">
 
+			<div id="Pronto" class="project">
 
+				<div class="thumbnail">
+					<img src="images/pronto/thumbnail.png" alt="Pronto" style="height:100%;width:auto">
+				</div>
 
+				<div id = "bio">
+
+					<div class="titles">
+						<div class="icon">
+							<img src="images/pronto/icon.png" alt="Pronto" style="height:100%;width:auto">
+						</div>
+						<!--<h4>Nov 2016</h4>-->
+						<h2>Pronto</h2>
+						<h3>The Reddit of Facebook Chats </h3>
+					</div>
+
+					<div class="info">
+						<p>Pronto is an Android app that uses linear regression machine learning to sort the daily
+							messages in congested Facebook group chats. <p>
+					</div>
+
+				</div>
+
+				<div class ="expand">
+						<h5>&#x25bc See More</h5>
+				</div>
+
+				<div class="extra">
+
+					<img id="ProntoPic" src="images/pronto/screen1.png" alt="Screenshot" style="height:30em;width:auto">
+
+					<ul id="ProntoCenter">
+						<li>
+						<p>You are a first year software student. You open your laptop to check today’s messages in your class’ Facebook chat and...THE HORROR: 467 unread messages. Any 1A student will confirm that this is no exaggeration. It is a silly yet serious problem we face every day. Should we read through 467 messages, most of which are nonsense, or ignore them all and risk missing out on genuinely useful information?
+						</p>
+						</li>
+
+						<li>
+						<br>
+						</li>
+						
+						<li>
+						<p>You are a first year software student. You open your laptop to check today’s messages in your class’ Facebook chat and...THE HORROR: 467 unread messages. Any 1A student will confirm that this is no exaggeration. It is a silly yet serious problem we face every day. Should we read through 467 messages, most of which are nonsense, or ignore them all and risk missing out on genuinely useful information?
+						</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class ="collapse">
+						<h5>&#x25B2 See Less</h5>
+				</div>
+
+			</div>
+		</div>
+		</li>
+		</ul>
 
 
 		<div id="ftSection" class="innerBlock">

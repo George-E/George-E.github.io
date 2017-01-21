@@ -112,28 +112,32 @@ li {
 .extra {
     display: none;
     margin: 3em 0 0 0;
-    padding: 0 2%;
 }
 
+.inline-flex {
+    display: inline-flex;
+}
 
 .collapse {
     display: none;
 }
 
 
-#ProntoPic {
+
+.large_extra {
     float: left;
+    text-align: center;/*overwrite project*/
+    padding: 0 1em;
     height: 20em;
 }
 
-
-#ProntoCenter {
-    text-align: center;/*overwrite project*/
-    padding-left: 1em;
-    height: 20em;
-    display: table-cell;
+.centerVertically {
+    background: #ee0;
+    display: block;
     vertical-align: middle;
 }
+
+
 
 
 

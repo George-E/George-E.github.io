@@ -30,7 +30,7 @@ $(document).ready(function(){
 				$content.slideToggle(500, function () {
 	        		//execute this after slideToggle is done
 	       			//change text of header based on visibility of content div
-				
+					//$content.css('display', 'inline-flex');
 	        		$collapse.show();
 			    });
 			});

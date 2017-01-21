@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+			$('.materialboxed').materialbox();
+
 			Materialize.showStaggeredList($('#animate1'));
 
 			var options = [
@@ -26,12 +28,10 @@ $(document).ready(function(){
 	    		$expand.hide();
 	    		$content.css('opacity', '1');
 	    		$('.extra li').css('opacity', '0');
-	    		Materialize.showStaggeredList('.extra');
 				Materialize.fadeInImage('.extra');
 				$content.slideToggle(500, function () {
 	        		//execute this after slideToggle is done
-	       			//change text of header based on visibility of content div
-					//$content.css('display', 'inline-flex');
+	    			Materialize.showStaggeredList('.extra');
 	        		$collapse.show();
 			    });
 			});
@@ -45,11 +45,8 @@ $(document).ready(function(){
    				$collapse.hide();
    				$content.css('opacity', '0');
    				/*otherwise weird squishing is visible*/
-				$content.slideToggle(500, function () {
-	       			 //execute this after slideToggle is done
-	       			 //change text of header based on visibility of content div
-	        		$expand.show();
-    			});
+   				$expand.show();
+				$content.slideToggle(500);
 			});
 
 /*

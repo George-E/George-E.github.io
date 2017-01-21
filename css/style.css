@@ -1,7 +1,7 @@
 
 
 .block {
-	padding: 1em;
+	padding: 2em 2em 0 2em;
     border: solid rgb(24,4,55);
     border-width: 2px 2px 2px 2px;/*top right bottom left*/
     box-shadow: 7px 7px 10px rgba(20, 20, 20, 0.9);/*right down blur colour*/
@@ -13,8 +13,8 @@
 }
 
 .columns {
-	background: #500;
 	display: table;
+	margin-bottom: 0;
 }
 
 .project .columns {
@@ -22,6 +22,7 @@
 }
 
 .center {
+	/*background: #400;*/
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
@@ -53,9 +54,21 @@
     font-size: 1.2rem;
     padding-top: 1em;
 }
+.info p{
+	margin-bottom: 0;
+}
+.info h6{
+	font-weight: bold;
+	margin-top: 0.25em;
+}
 
-
-.block h5 {
+.expand {
+	padding: 0;
+	margin-right: 0;
+	position: relative;
+	top: -1em;
+}
+.collapse h5 ,.expand h5 {
     cursor: pointer;
     padding-left: 2px;
     font-size: 15px;
@@ -65,8 +78,34 @@
 .collapse {
     display: none;
 }
+
+
 .extra {
     display: none;
+}
+
+
+/* For devices larger than 400px */
+@media (min-width: 400px) and (max-width: 549px) {
+.extra .columns {
+	height: 10em;
+}
+.extra .center {
+	height: 10em;
+}
+#extra_picture {
+	height: 25em;
+}
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+.extra .columns {
+	height: 18em;
+}
+.extra .center {
+	height: 18em;
+}
 }
 
 

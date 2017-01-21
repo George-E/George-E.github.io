@@ -8,24 +8,28 @@
 }
 
 .thumbnail {
-    width: auto;
-    max-width: 100%;
     max-height: 100%;
-    margin: auto;
-    padding: 2% 10%;
+    max-width: 100%;
 }
 
 .columns {
-	background: #404;
-	height: 100%;
+	background: #500;
+	display: table;
 }
 
-#bio {
-	margin-left: 1em;
-	height: 100%;
-	background: #400;
+.project .columns {
+	height: 15em;
 }
 
+.center {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.project .center {
+	height: 15em;
+}
 
 .icon {
     height: 5em;
@@ -34,6 +38,7 @@
     padding-right: 1em;
 }
 .titles {
+	text-align: left;
     padding-top: 0.5em;
 }
 .titles h4 {/*title*/
@@ -43,8 +48,28 @@
     margin: 0.25em 0 0 0;
 }
 .info  {/*desc*/
+	text-align: left;
     clear: left;
     font-size: 1.2rem;
     padding-top: 1em;
 }
+
+
+.block h5 {
+    cursor: pointer;
+    padding-left: 2px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    clear: left;
+}
+.collapse {
+    display: none;
+}
+.extra {
+    display: none;
+}
+
+
+
+
 

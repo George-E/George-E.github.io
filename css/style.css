@@ -1,0 +1,50 @@
+
+
+.block {
+	padding: 1em;
+    border: solid rgb(24,4,55);
+    border-width: 2px 2px 2px 2px;/*top right bottom left*/
+    box-shadow: 7px 7px 10px rgba(20, 20, 20, 0.9);/*right down blur colour*/
+}
+
+.thumbnail {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    padding: 2% 10%;
+}
+
+.columns {
+	background: #404;
+	height: 100%;
+}
+
+#bio {
+	margin-left: 1em;
+	height: 100%;
+	background: #400;
+}
+
+
+.icon {
+    height: 5em;
+    float: left;
+    clear: left;
+    padding-right: 1em;
+}
+.titles {
+    padding-top: 0.5em;
+}
+.titles h4 {/*title*/
+    margin: 0.1em 0 0 0;
+}
+.titles h6 {/*subtitle*/
+    margin: 0.25em 0 0 0;
+}
+.info  {/*desc*/
+    clear: left;
+    font-size: 1.2rem;
+    padding-top: 1em;
+}
+

@@ -24,6 +24,7 @@ $(document).ready(function(){
 				$collapse = $content.next();
 	    		//open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
 	    		$expand.hide();
+	    		$content.css('opacity', '1');
 	    		$('.extra li').css('opacity', '0');
 	    		Materialize.showStaggeredList('.extra');
 				Materialize.fadeInImage('.extra');
@@ -42,6 +43,8 @@ $(document).ready(function(){
 				$expand = $content.prev();
     			//open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
    				$collapse.hide();
+   				$content.css('opacity', '0');
+   				/*otherwise weird squishing is visible*/
 				$content.slideToggle(500, function () {
 	       			 //execute this after slideToggle is done
 	       			 //change text of header based on visibility of content div

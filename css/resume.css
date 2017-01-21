@@ -115,7 +115,7 @@ li {
 }
 
 .inline-flex {
-    display: inline-flex;
+    display: flex;
 }
 
 .collapse {
@@ -125,14 +125,12 @@ li {
 
 
 .large_extra {
-    float: left;
     text-align: center;/*overwrite project*/
     padding: 0 1em;
     height: 20em;
 }
 
 .centerVertically {
-    background: #ee0;
     display: block;
     vertical-align: middle;
 }

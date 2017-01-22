@@ -108,6 +108,9 @@ li {
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
+.extra .row {
+	width: 95%
+}
 .extra .columns {
 	height: 18em;
 }

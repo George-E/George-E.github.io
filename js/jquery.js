@@ -26,12 +26,17 @@ $(document).ready(function(){
 				$collapse = $content.next();
 	    		//open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
 	    		$expand.hide();
-	    		$content.css('opacity', '1');
-	    		$('.extra li').css('opacity', '0');
-				Materialize.fadeInImage('.extra');
+
+	    		$content.find('ul').each(function() {
+					Materialize.showStaggeredList($(this));
+				});
+
+	    		$content.find('img').each(function() {
+					Materialize.fadeInImage($(this));
+				});
+
 				$content.slideToggle(500, function () {
 	        		//execute this after slideToggle is done
-	    			Materialize.showStaggeredList('.extra');
 	        		$collapse.show();
 			    });
 			});
@@ -46,7 +51,9 @@ $(document).ready(function(){
    				$content.css('opacity', '0');
    				/*otherwise weird squishing is visible*/
    				$expand.show();
-				$content.slideToggle(500);
+				$content.slideToggle(500, function() { 
+					$content.css('opacity', '1'); 
+				} );
 			});
 
 /*

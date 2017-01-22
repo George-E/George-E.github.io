@@ -1,8 +1,32 @@
+nav {
+	position: relative;
+	top: -10px;
+	left: -1%;
+	width: 102%;
+	height: 7em;
+	padding: 0;
+    border: solid #000;
+    border:  0, 0, 2px,0;
+    box-shadow: 0 7px 10px rgba(20, 20, 20, 0.9);/*right down blur colour*/
+}
 
+.block_nav_wrapper h1 {
+	text-align: center;
+	width: 100%
+	height: auto;
+	margin: 0;
+}
+
+.block_nav_wrapper h3 {
+	text-align: center;
+	width: 100%
+	height: auto;
+	margin: 0;
+}
 
 .block {
 	padding: 2em 2em 0 2em;
-    border: solid rgb(24,4,55);
+    border: solid #000;
     border-width: 2px 2px 2px 2px;/*top right bottom left*/
     box-shadow: 7px 7px 10px rgba(20, 20, 20, 0.9);/*right down blur colour*/
 }

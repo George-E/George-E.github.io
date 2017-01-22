@@ -8,6 +8,12 @@ $(document).ready(function(){
 				indicators: true
 			});
 
+  			$('html,body').animate({
+        		scrollTop: $(window).scrollTop() -40
+    		})
+    		//to trigger scroll fire if jumping to a certain project
+    		//wont appear until scrolled
+    		//also served the purpose of centering project in screen
 
 			Materialize.showStaggeredList($('#animate1'));
 
@@ -27,6 +33,13 @@ $(document).ready(function(){
 
 
   			$(".expand").click(function(){
+
+  				$('.carousel').carousel({
+				dist: -50,
+				padding: 10,
+				indicators: true
+				});
+
 				$expand = $(this);
 	    		//getting the next element
 	   			$content = $expand.next();

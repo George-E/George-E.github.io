@@ -12,8 +12,8 @@ li {
 }
 
 .thumbnail {
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 95%;
+    max-width: 95%;
 }
 
 .columns {
@@ -114,9 +114,7 @@ li {
 .extra .center {
 	height: 18em;
 }
+
 }
 
-
-
-
-
+ 

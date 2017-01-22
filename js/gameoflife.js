@@ -5,7 +5,7 @@ var sqaureFillColour =  "#999";//'rgb('+102+','+154+','+204+')';
 //var squaresBorderColour = "ffffff";
 var squaresBorderColourHue = 40;
 var squaresBorderColourHueIncrement = 4;
-var refreshRate = 2000; //milliS
+var refreshRate = 200; //milliS
 
 //create the canvas element
 var myCanvas = document.createElement("canvas");

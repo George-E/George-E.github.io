@@ -2,6 +2,13 @@ $(document).ready(function(){
 
 			$('.materialboxed').materialbox();
 
+			$('.carousel').carousel({
+				dist: -50,
+				padding: 10,
+				indicators: true
+			});
+
+
 			Materialize.showStaggeredList($('#animate1'));
 
 			var options = [

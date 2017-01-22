@@ -115,7 +115,13 @@ li {
 .extra ul{
     margin:0 !important;
 }
-
+.carousel {
+	position: relative;
+	top: -65px;
+}
+.carousel-item {
+	width: 10em !important;
+}
 
 /* For devices larger than 400px */
 @media (min-width: 400px) and (max-width: 549px) {
@@ -132,7 +138,7 @@ li {
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
-.extra .row {
+ .Pronto .extra .row {
 	width: 95%
 }
 .extra .columns {

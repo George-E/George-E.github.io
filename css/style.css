@@ -1,27 +1,36 @@
 nav {
-	position: relative;
-	top: -10px;
-	left: -1%;
-	width: 102%;
+	background: rgb(102,153,204);
 	height: 7em;
 	padding: 0;
-    border: solid #000;
-    border:  0, 0, 2px,0;
+    border-bottom: solid #000;
+    border-width: 2px;
     box-shadow: 0 7px 10px rgba(20, 20, 20, 0.9);/*right down blur colour*/
 }
 
-.block_nav_wrapper h1 {
+
+footer {
+	background: rgb(102,153,204);
+	top: 300;
+	height: 4em;
+	padding: 0;
+    border-top: solid #000;
+    border-width: 2px;
+}
+
+.block_nav_wrapper h3, .block_nav_wrapper h1, footer h6, footer p {
 	text-align: center;
 	width: 100%
 	height: auto;
 	margin: 0;
 }
 
-.block_nav_wrapper h3 {
-	text-align: center;
-	width: 100%
-	height: auto;
-	margin: 0;
+footer h6 {
+	font-size: 1em;
+	margin-top: 4px;
+}
+
+footer p {
+	font-size: 0.8em;
 }
 
 .block {

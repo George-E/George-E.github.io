@@ -6,11 +6,11 @@ $(document).ready(function(){
 				dist: -50,
 				padding: 10,
 				indicators: true
-			});
+			})
 
   			$('html,body').animate({
         		scrollTop: $(window).scrollTop() -40
-    		})
+    		});
     		//to trigger scroll fire if jumping to a certain project
     		//wont appear until scrolled
     		//also served the purpose of centering project in screen
@@ -55,10 +55,12 @@ $(document).ready(function(){
 					Materialize.fadeInImage($(this));
 				});
 
-				$content.slideToggle(500, function () {
-	        		//execute this after slideToggle is done
-	        		$collapse.show();
-			    });
+	    		$collapse.show();
+	    		$('html,body').animate({
+          			scrollTop: $collapse.offset().top -100
+        		});
+
+				$content.slideToggle(500);
 			});
 
 			$(".collapse").click(function(){
@@ -71,6 +73,10 @@ $(document).ready(function(){
    				$content.css('opacity', '0');
    				/*otherwise weird squishing is visible*/
    				$expand.show();
+   				$('html,body').animate({
+          			scrollTop: $expand.offset().top -400
+        		});
+
 				$content.slideToggle(500, function() { 
 					$content.css('opacity', '1'); 
 				} );

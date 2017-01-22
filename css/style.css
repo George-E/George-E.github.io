@@ -7,6 +7,10 @@
     box-shadow: 7px 7px 10px rgba(20, 20, 20, 0.9);/*right down blur colour*/
 }
 
+li {
+	opacity: 0;
+}
+
 .thumbnail {
     max-height: 100%;
     max-width: 100%;

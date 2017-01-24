@@ -22,7 +22,6 @@ $(document).ready(function(){
 			$('#rblxExtra').slideToggle(500);
 			
 
-			
 			var options = [
 				{selector: '#animate2', offset: 75, callback: function(el) {
 					$('#scroll').hide();
@@ -33,6 +32,10 @@ $(document).ready(function(){
     				} },
 
     			{selector: '#animate4', offset: 75, callback: function(el) {
+      				Materialize.showStaggeredList($(el));
+   					 } },
+
+   				{selector: '#animate5', offset: 75, callback: function(el) {
       				Materialize.showStaggeredList($(el));
    					 } }
    			];

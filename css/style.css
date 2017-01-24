@@ -1,31 +1,5 @@
 
 
-
-footer {
-	background: rgb(102,153,204);
-	top: 300;
-	height: 4em;
-	padding: 0;
-    border-top: solid #000;
-    border-width: 2px;
-}
-
-.block_nav_wrapper h3, .block_nav_wrapper h1, footer h6, footer p {
-	text-align: center;
-	width: 100%
-	height: auto;
-	margin: 0;
-}
-
-footer h6 {
-	font-size: 1em;
-	margin-top: 6px;
-}
-
-footer p {
-	font-size: 0.8em;
-}
-
 .block {
 	padding: 2em 2em 0 2em;
     border: solid #000;

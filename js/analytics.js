@@ -25,11 +25,13 @@ function drawChart() {
 
 function initialize() {
 
-  devices();
   var opts = {sendMethod: 'auto'};
   // Replace the data source URL on next line with your data source URL.
   var query = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICA3pCBCgw&format=data-table-response', opts);
   query.send(handleQueryResponse);
+
+  var queryToday = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICAvNXTCAw&format=data-table-response', opts);
+  queryToday.send(handleQueryResponseToday);
 
   var queryCountry = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICAmdKFCgw&format=data-table-response', opts);
   queryCountry.send(handleQueryResponseCountry);
@@ -58,8 +60,26 @@ function handleQueryResponse(response) {
    } else {
     $('#date').text('Yesterday\'s (' + months[d.getMonth()]+' '+ (d.getDate()-1)+ ') Total Play Count:');
    }
+
+
+   
+  devices();
 }
 
+function handleQueryResponseToday(response) {
+
+  if (response.isError()) {
+    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+
+   $('#playValueToday').text(''+ response.getDataTable().getValue(0,1 ));
+
+   var d = new Date();
+   var months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]; 
+    $('#dateToday').text('Plays So Far Today (' + (months[d.getMonth()]) + ' ' +(d.getDate()) + "):") ;
+   
+}
 
 function handleQueryResponseCountry(response) {
 

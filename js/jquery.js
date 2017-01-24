@@ -22,6 +22,7 @@ $(document).ready(function(){
 			$('#rblxExtra').slideToggle(500);
 			
 
+			
 			var options = [
 				{selector: '#animate2', offset: 75, callback: function(el) {
 					$('#scroll').hide();

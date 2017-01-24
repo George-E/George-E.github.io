@@ -143,6 +143,17 @@ footer p {
 }
 
 
+@media (max-height: 749.9px) {
+#scroll {
+	opacity: 0;
+}
+}
+@media (min-height: 750px) {
+#scroll {
+	opacity: 1;
+}
+}
+
 /* For devices larger than 400px */
 @media (min-width: 400px) and (max-width: 549px) {
 .extra .columns {

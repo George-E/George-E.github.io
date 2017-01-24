@@ -51,7 +51,7 @@
 }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) and (max-width: 1219.9px) {
+@media (min-width: 550px) and (max-width: 1049.9px) {
    .container {
     width: 80%;
      padding: 0;}
@@ -125,7 +125,7 @@
 }
 
 /* For devices larger than 900px */
-@media (min-width: 1220px) {
+@media (min-width: 1050px) {
   .container {
     width: 80%; }
   .column,

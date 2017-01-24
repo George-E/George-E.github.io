@@ -45,6 +45,9 @@ li {
 }
 
 
+
+
+
 .thumbnail {
     max-height: 95%;
     max-width: 95%;
@@ -76,6 +79,19 @@ li {
     clear: left;
     padding-right: 1em;
 }
+
+.btn {
+	margin-right: .5em;
+	float: left;
+	text-align: center;
+	height: 1.8em;
+	max-width: 4.1em;
+	text-transform: none;
+}
+
+
+
+
 .titles {
 	text-align: left;
     padding-top: 0.5em;
@@ -118,9 +134,10 @@ li {
 }
 
 
-.extra {
+.invis {
     display: none;
 }
+
 
 .extra ul{
     margin:0 !important;

@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 			$('.materialboxed').materialbox();
+			 $(".button-collapse").sideNav();
 
 			$('.carousel').carousel({
 				dist: -50,

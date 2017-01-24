@@ -15,12 +15,15 @@ $(document).ready(function(){
     		//wont appear until scrolled
     		//also served the purpose of centering project in screen
 
+
+
 			Materialize.showStaggeredList($('#animate1'));
 			$('#rblxExtra').slideToggle(500);
 			
 
 			var options = [
 				{selector: '#animate2', offset: 75, callback: function(el) {
+					$('#scroll').hide();
       				Materialize.showStaggeredList($(el));
     				} },
 				{selector: '#animate3', offset: 75, callback: function(el) {

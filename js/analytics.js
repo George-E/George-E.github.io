@@ -42,7 +42,7 @@ function initialize() {
 function handleQueryResponse(response) {
 
   if (response.isError()) {
-    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+   // alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
   }
 
@@ -61,15 +61,12 @@ function handleQueryResponse(response) {
     $('#date').text('Yesterday\'s (' + months[d.getMonth()]+' '+ (d.getDate()-1)+ ') Total Play Count:');
    }
 
-
-  $('#spinner').hide();
-  devices();
 }
 
 function handleQueryResponseToday(response) {
 
   if (response.isError()) {
-    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    //alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
   }
 
@@ -84,7 +81,7 @@ function handleQueryResponseToday(response) {
 function handleQueryResponseCountry(response) {
 
   if (response.isError()) {
-    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    //alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
   }
 
@@ -93,6 +90,9 @@ function handleQueryResponseCountry(response) {
   data.setCell(0,0,'Canada');
   var chart = new google.visualization.PieChart(document.getElementById('map_chart'));
   chart.draw(data, {chartArea:{width:'100%',height:'100%'}, width:270,is3D: true});
+
+  $('#spinner').hide();
+  devices();
 
 }
 

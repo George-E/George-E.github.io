@@ -51,7 +51,7 @@
 }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) and (max-width: 899.9px) {
+@media (min-width: 550px) and (max-width: 1219.9px) {
    .container {
     width: 80%;
      padding: 0;}
@@ -75,8 +75,8 @@
   .extra .one.columns                    { width: 16.6666666667%; }
   .extra .two.columns                    { width: 33.3333333333%; }
   .extra .three.columns                  { width: 50%;            }
-  .extra .four.columns                   { width: 66.6666666667%; }
-  .extra .five.columns                   { width: 83.3333333333%; }
+  .extra .four.columns                   { width: 100%; }
+  .extra .five.columns                   { width: 100%; }
   .extra .six.columns                    { width: 100%;            }
   .extra .seven.columns                  { width: 100%; }
   .extra .eight.columns                  { width: 100%; }
@@ -125,7 +125,7 @@
 }
 
 /* For devices larger than 900px */
-@media (min-width: 900px) {
+@media (min-width: 1220px) {
   .container {
     width: 80%; }
   .column,
@@ -139,7 +139,7 @@
   .one.columns                    { width: 4.66666666667%; }
   .two.columns                    { width: 13.3333333333%; }
   .three.columns                  { width: 22%;            }
-  .four.columns                   { width: 30.6666666667%; }
+  .four.columns                   { width: 30.6666666666% ; }
   .five.columns                   { width: 39.3333333333%; }
   .six.columns                    { width: 48%;            }
   .seven.columns                  { width: 56.6666666667%; }

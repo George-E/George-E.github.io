@@ -44,6 +44,7 @@ li {
 	opacity: 0;
 }
 
+
 .thumbnail {
     max-height: 95%;
     max-width: 95%;
@@ -131,6 +132,7 @@ li {
 .carousel-item {
 	width: 12em !important;
 }
+
 
 /* For devices larger than 400px */
 @media (min-width: 400px) and (max-width: 549px) {

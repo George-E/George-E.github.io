@@ -18,14 +18,14 @@ $(document).ready(function(){
 			Materialize.showStaggeredList($('#animate1'));
 
 			var options = [
-				{selector: '#animate2', offset: 150, callback: function(el) {
+				{selector: '#animate2', offset: 75, callback: function(el) {
       				Materialize.showStaggeredList($(el));
     				} },
-				{selector: '#animate3', offset: 150, callback: function(el) {
+				{selector: '#animate3', offset: 75, callback: function(el) {
       				Materialize.showStaggeredList($(el));
     				} },
 
-    			{selector: '#animate4', offset: 150, callback: function(el) {
+    			{selector: '#animate4', offset: 75, callback: function(el) {
       				Materialize.showStaggeredList($(el));
    					 } }
    			];
@@ -82,6 +82,8 @@ $(document).ready(function(){
 				} );
 			});
 
+
+			//$.ajax({ url: 'https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICA-MKECgw', success: function(data) { alert(data); } });
 /*
 $(".project").hover(
 	//The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.

@@ -88,6 +88,7 @@ function handleQueryResponseCountry(response) {
   //alert(response.getDataTable().getValue(0,0));
   var data = response.getDataTable();
   data.setCell(0,0,'Canada');
+  data.sort({column: 1, desc: true});
   var chart = new google.visualization.PieChart(document.getElementById('map_chart'));
   chart.draw(data, {chartArea:{width:'100%',height:'100%'}, width:270,is3D: true});
 

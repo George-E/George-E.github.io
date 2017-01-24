@@ -62,7 +62,7 @@ function handleQueryResponse(response) {
    }
 
 
-   
+  $('#spinner').hide();
   devices();
 }
 

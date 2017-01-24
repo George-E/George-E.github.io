@@ -19,6 +19,7 @@ $(document).ready(function(){
 
 
 			Materialize.showStaggeredList($('#animate1'));
+			
 			$('#rblxExtra').slideToggle(500);
 			
 

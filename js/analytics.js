@@ -28,10 +28,10 @@ function initialize() {
   devices();
   var opts = {sendMethod: 'auto'};
   // Replace the data source URL on next line with your data source URL.
-  var query = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICA-MKECgw&format=data-table-response', opts);
+  var query = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICA3pCBCgw&format=data-table-response', opts);
   query.send(handleQueryResponse);
 
-  var queryCountry = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICAvNWTCQw&format=data-table-response', opts);
+  var queryCountry = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICAmdKFCgw&format=data-table-response', opts);
   queryCountry.send(handleQueryResponseCountry);
 
 }
@@ -45,6 +45,19 @@ function handleQueryResponse(response) {
   }
 
    $('#playValue').text(''+ response.getDataTable().getValue(0,1 ));
+
+   var d = new Date();
+   var months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]; 
+   var days = [31,28,31,30,31,30,31,31,30,31,30,31]; 
+   if (d.getDate() ==1) {
+      var mon = months[d.getMonth()]-1;
+      if (mon == -1) {
+        mon = 11;
+      }
+      $('#date').text('Yesterday\'s (' + mon+' '+ days[mon]+ ') Total Play Count:');
+   } else {
+    $('#date').text('Yesterday\'s (' + months[d.getMonth()]+' '+ (d.getDate()-1)+ ') Total Play Count:');
+   }
 }
 
 
@@ -71,9 +84,9 @@ function devices(response) {
         data.addColumn('string', 'device');
         data.addColumn('number', 'percent');
         data.addRows([
-          ['Tablet', 43],
-          ['Computer', 32],
-          ['Phone', 25]
+          ['Tablet', 0.43],
+          ['Computer', 0.32],
+          ['Phone', 0.25]
         ]);
 
         // Set chart options

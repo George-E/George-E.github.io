@@ -38,6 +38,10 @@ $(document).ready(function(){
 
    				{selector: '#animate5', offset: 75, callback: function(el) {
       				Materialize.showStaggeredList($(el));
+   					 } },
+
+   				{selector: '#animate6', offset: 75, callback: function(el) {
+      				Materialize.showStaggeredList($(el));
    					 } }
    			];
   			Materialize.scrollFire(options);

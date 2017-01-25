@@ -55,6 +55,15 @@
 	text-transform: none;
 }
 
+.btnText {
+	margin-right: .5em;
+	float: left;
+	text-align: center;
+	height: 1.8em;
+	max-width: 8.1em;
+	text-transform: none;
+}
+
 
 
 

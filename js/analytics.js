@@ -74,7 +74,7 @@ function handleQueryResponse(response) {
 
 function handleQueryResponseToday(response) {
 
-  if (response.isError()) {
+  /*if (response.isError()) {
     //alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
   }
@@ -84,7 +84,7 @@ function handleQueryResponseToday(response) {
    var d = new Date();
    var months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]; 
     $('#dateToday').text('Plays So Far Today (' + (months[d.getMonth()]) + ' ' +(d.getDate()) + "):") ;
-   
+   */
 }
 
 function handleQueryResponseCountry(response) {

@@ -17,10 +17,10 @@ $(document).ready(function(){
     		//also served the purpose of centering project in screen
 
 
+    		/*$('#rblxExtra').slideToggle(500);*/
 
-			Materialize.showStaggeredList($('#animate1'));
-			
-			$('#rblxExtra').slideToggle(500);
+
+			/*Materialize.showStaggeredList($('#animate1'));
 			
 
 			var options = [
@@ -44,7 +44,7 @@ $(document).ready(function(){
       				Materialize.showStaggeredList($(el));
    					 } }
    			];
-  			Materialize.scrollFire(options);
+  			Materialize.scrollFire(options);*/
 
 
   			$(".expand").click(function(){

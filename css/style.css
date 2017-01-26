@@ -7,7 +7,7 @@
     box-shadow: 7px 7px 10px rgba(20, 20, 20, 0.9);/*right down blur colour*/
 }
 
-.container li {
+.block li {
 	opacity: 0;
 }
 
@@ -54,16 +54,6 @@
 	max-width: 4.1em;
 	text-transform: none;
 }
-
-.btnText {
-	margin-right: .5em;
-	float: left;
-	text-align: center;
-	height: 1.8em;
-	max-width: 8.1em;
-	text-transform: none;
-}
-
 
 
 

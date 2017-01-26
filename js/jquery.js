@@ -7,6 +7,7 @@ $(document).ready(function(){
 				dist: -50,
 				padding: 10,
 				indicators: true
+				
 			})
 
   			$('html,body').animate({
@@ -19,7 +20,7 @@ $(document).ready(function(){
 
     		/*$('#rblxExtra').slideToggle(500);*/
 
-    	
+
 
 
 			/*Materialize.showStaggeredList($('#animate1'));

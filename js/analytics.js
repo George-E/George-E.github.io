@@ -39,8 +39,8 @@ function initialize() {
   var query = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICA3pCBCgw&format=data-table-response', opts);
   query.send(handleQueryResponse);
 
-  var queryToday = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICAvNXTCAw&format=data-table-response', opts);
-  queryToday.send(handleQueryResponseToday);
+  /*var queryToday = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICAvNXTCAw&format=data-table-response', opts);
+  queryToday.send(handleQueryResponseToday);*/
 
   var queryCountry = new google.visualization.Query('https://apisuperproxyconsole.appspot.com/query?id=ahZzfmFwaXN1cGVycHJveHljb25zb2xlchULEghBcGlRdWVyeRiAgICAmdKFCgw&format=data-table-response', opts);
   queryCountry.send(handleQueryResponseCountry);
@@ -51,9 +51,10 @@ function initialize() {
 function handleQueryResponse(response) {
 
   if (response.isError()) {
-   // alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
   }
+
 
    $('#playValue').text(''+ response.getDataTable().getValue(0,1 ));
 

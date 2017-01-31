@@ -51,7 +51,7 @@ function initialize() {
 function handleQueryResponse(response) {
 
   if (response.isError()) {
-    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+   // alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
   }
 
@@ -66,9 +66,11 @@ function handleQueryResponse(response) {
       if (mon == -1) {
         mon = 11;
       }
-      $('#date').text('Yesterday\'s (' + mon+' '+ days[mon]+ ') Total Play Count:');
+      //$('#date').text('Yesterday\'s (' + mon+' '+ days[mon]+ ') Total Play Count:');
+      $('#date').text('Jan 28\'s Total Play Count:');
    } else {
-    $('#date').text('Yesterday\'s (' + months[d.getMonth()]+' '+ (d.getDate()-1)+ ') Total Play Count:');
+    //$('#date').text('Yesterday\'s (' + months[d.getMonth()]+' '+ (d.getDate()-1)+ ') Total Play Count:');
+    $('#date').text('Jan 28\'s Total Play Count:');
    }
 
 }

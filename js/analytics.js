@@ -62,11 +62,11 @@ function handleQueryResponse(response) {
    var months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]; 
    var days = [31,28,31,30,31,30,31,31,30,31,30,31]; 
    if (d.getDate() ==1) {
-      var mon = months[d.getMonth()]-1;
+      var mon = d.getMonth()-1;
       if (mon == -1) {
         mon = 11;
       }
-      $('#date').text('Yesterday\'s (' + mon+' '+ days[mon]+ ') Total Play Count:');
+      $('#date').text('Yesterday\'s (' + months[mon]+' '+ days[mon]+ ') Total Play Count:');
      // $('#date').text('Jan 28\'s Total Play Count:');
    } else {
     $('#date').text('Yesterday\'s (' + months[d.getMonth()]+' '+ (d.getDate()-1)+ ') Total Play Count:');

@@ -73,6 +73,9 @@ function handleQueryResponse(response) {
     //$('#date').text('Jan 28\'s Total Play Count:');
    }
 
+   total = response.getDataTable().getValue(0,1 );
+   maybeShowCountry();
+   showDevices();
 }
 
 function handleQueryResponseToday(response) {
@@ -97,20 +100,36 @@ function handleQueryResponseCountry(response) {
     return;
   }
 
-  //alert(response.getDataTable().getValue(0,0));
-  var data = response.getDataTable();
-  data.setCell(0,0,'Unknown');
-  data.sort({column: 1, desc: true});
-  var chart = new google.visualization.PieChart(document.getElementById('map_chart'));
-  chart.draw(data, {chartArea:{width:'100%',height:'100%'}, width:270,is3D: true});
+  countryResponse = response;
+  maybeShowCountry();
+  showDevices();
+}
 
-  $('#spinner').hide();
-  devices();
+var total = null;
+var countryResponse = null;
 
+function maybeShowCountry() {
+    if (total != null && countryResponse != null) {
+      //alert(response.getDataTable().getValue(0,0));
+      var data = countryResponse.getDataTable();
+
+      countrySessionSum = 0;
+      for (i = 0; i < data.getNumberOfRows(); i++) { 
+        countrySessionSum += data.getValue(i,1);
+        //alert(countrySessionSum);
+      }
+      data.addRow(['Other',total-countrySessionSum]);
+
+      data.sort({column: 1, desc: true});
+      var chart = new google.visualization.PieChart(document.getElementById('map_chart'));
+      chart.draw(data, {chartArea:{width:'100%',height:'100%'}, width:270,is3D: true});
+
+      $('#spinner').hide();
+   }
 }
 
 
-function devices(response) {
+function showDevices() {
 
   // Create the data table.
         var data = new google.visualization.DataTable();

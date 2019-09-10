@@ -109,7 +109,7 @@ var total = null;
 var countryResponse = null;
 
 function maybeShowCountry() {
-    if (total != null && countryResponse != null) {
+    /*if (total != null && countryResponse != null) {
       //alert(response.getDataTable().getValue(0,0));
       var data = countryResponse.getDataTable();
 
@@ -125,7 +125,7 @@ function maybeShowCountry() {
       chart.draw(data, {chartArea:{width:'100%',height:'100%'}, width:270,is3D: true});
 
       $('#spinner').hide();
-   }
+   }*/
 }
 
 
